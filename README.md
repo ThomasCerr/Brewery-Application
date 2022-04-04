@@ -1,8 +1,8 @@
 ## Brewery Application
 
-##
-Project Req:
-##
+
+## Project Requirements:
+
 Your project should fulfill the following requirements:
 
 Use a CSS framework other than Bootstrap.
@@ -27,12 +27,10 @@ Have a quality README (with unique name, description, technologies used, screens
 
 Finally, you must add your project to the portfolio that you created in Module 2.
 
--------------------------------------------------------------------------------------------------------------------------------------
-##
-Proposal
-##
 
-What are you going to build and what problem does it solve?
+## Proposal
+
+What are you going to build and what problem does it solve?<br/>
 A brewery locator app that finds a local brewery based on set parameters. It will also educate the user with random beer facts.
 
 What APIs do you plan to use? Remember to look for free APIs with strong documentation that do not require CORS
