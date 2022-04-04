@@ -1,4 +1,4 @@
-## Project-1 - (Change to project name):
+## Brewery Application
 
 ##
 Project Req:
