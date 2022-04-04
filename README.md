@@ -1,4 +1,4 @@
-## Brewery Application
+## Brewery Application - Requirements & Proposal
 
 
 ## Project Requirements:
