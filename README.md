@@ -31,11 +31,14 @@ Finally, you must add your project to the portfolio that you created in Module 2
 ## Proposal
 
 What are you going to build and what problem does it solve?<br/>
-A brewery locator app that finds a local brewery based on set parameters. It will also educate the user with random beer facts.
+(1)A brewery locator app that finds a local brewery based on set parameters.<br/>
+(2) Rating system <br/>
+(3) Based on user selection of image or description catagorize list by  "beer_style": (untapped API)
 
 What APIs do you plan to use? Remember to look for free APIs with strong documentation that do not require CORS<br/>
-https://www.openbrewerydb.org/
-https://www.brewerydbtemp.com/developers/docs/endpoint/beer-random
+https://www.openbrewerydb.org/ <br/>
+https://www.brewerydbtemp.com/developers/docs/endpoint/beer-random <br/>
+https://untappd.com/api/docs#beerinfo <br/>
 
 What CSS library or framework do you plan to use?<br/>
 https://materializecss.com/
