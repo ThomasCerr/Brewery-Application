@@ -1,0 +1,69 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+header{
+    background-image: url('../assets/images/Brewery-Image\ .jpeg');
+    background-size:cover;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.bg-hero{
+    background-image: url('../assets/images/Brewery-Image\ .jpeg');
+    background-size:cover;
+    
+}
+
+.bg-hero::before{
+    content: "";
+    opacity: .75;
+    
+}
+
+.row1 {
+    position: sticky;
+    position: -webkit-sticky;
+    height: 400px;
+    align-items: center;
+}
+
+.row{
+    display:flex;
+    justify-content: space-between;
+   
+}
+
+.box1{
+    height:300px;
+    margin: 50px;
+    box-shadow: 0 0 10px;
+
+}
+
+.box2{
+
+    background-color: rgba(122, 86, 86, 0.75);
+    opacity: .75;
+    height:300px;
+    margin: 50px;
+    border: 5px solid;
+    border-radius: 12px;
+}
+
+.box3, .box4 {
+    box-shadow: 0 0 10px;
+    margin: 50px;
+}
+
+.btn {
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+.searchbox h4{
+    text-emphasis: bold;
+}
