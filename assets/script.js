@@ -2,6 +2,7 @@ var searchInput = document.getElementById('search-city');
 var breweryListEl = document.querySelector(".breweryList");
 
 
+
 //Brewery List Function/Div Creation
 
 var fetchBreweryCity = function(){
@@ -15,8 +16,6 @@ var fetchBreweryCity = function(){
                 console.log(data)
                 
                 // randomizer needed
-                // get rid of nulls in address
-                // do not show closed locations
                 for (let i = 0; i < data.length; i++) {
                  var breweryType = data[i].brewery_type;
                  if (breweryType != "closed") {
@@ -42,20 +41,18 @@ var fetchBreweryCity = function(){
         }
     })}
 
-//Food List Function/Div Creation
-// var fetchFoodCity = function(){
-//         let city = searchInput.value.trim();
-//         console.log(city)
-//         let apiURL = ('http://data.streetfoodapp.com/1.1/regions')
-//         fetch(apiURL).then(function (response) {
-//             if (response.ok) {
-//                 response.json().then(function (data) {
-//                     console.log(data)
-//                 })
-//             }
-//         })}
-
-
+// Food List Function/Div Creation
+var fetchWinery = function(){
+        let city = searchInput.value.trim();
+        console.log(city)
+        // let apiURL = ();
+        fetch(apiURL).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (data) {
+                    console.log(data)
+                })
+            }
+        })}
 
 
 //Listener
@@ -64,7 +61,7 @@ var fetchBreweryCity = function(){
         if (searchInput !== ''){
         localStorage.setItem(JSON.stringify(searchInput), JSON.stringify(searchInput));
         fetchBreweryCity()
-        // fetchFoodCity()
+        // fetchWinery()
         }
         else {
             window.alert("Please Input a City");
