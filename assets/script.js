@@ -9,24 +9,34 @@ var fetchBreweryCity = function(){
     
     let apiURL = ('https://api.openbrewerydb.org/breweries?per_page=15&by_city=' + city)
     fetch(apiURL).then(function (response) {
-        //add some type of clear list here
+        //add some type of clear list here to get rid of the old data
         if (response.ok) {
             response.json().then(function (data) {
                 console.log(data)
                 
-                //randomizer needed
+                // randomizer needed
+                // get rid of nulls in address
+                // do not show closed locations
                 for (let i = 0; i < data.length; i++) {
+                 var breweryType = data[i].brewery_type;
+                 if (breweryType != "closed") {
                 var breweryName = data[i].name;
-                var breweryType = data[i].brewery_type;
                 var address = data[i].street;
+                if (address == null){
+                    address = '---'
+                }
                 var phone = data[i].phone;
+                if (phone == null){
+                    phone = '---'
+                }
            
 
                var breweryNameContainerEl = document.createElement("tr");
                breweryNameContainerEl.innerHTML = 
-               '<tr> <td class="breweryName"> ' + breweryName +' </td> <td class="address"> ' + address +' </td> <td class="phoneNumber"> ' + phone +' </td> </td> <td class="type"> ' + breweryType +' </tr>';
+               '<tr> <td class="breweryName responsive-table"> ' + breweryName +' </td> <td class="address responsive-table"> ' + address +' </td> <td class="phoneNumber responsive-table"> ' + phone +' </td> </td> <td class="type"> ' + breweryType +' </tr>';
                 breweryListEl.appendChild(breweryNameContainerEl);
-       
+            }
+        
             }
             })
         }
