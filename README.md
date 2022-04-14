@@ -37,8 +37,8 @@ What are you going to build and what problem does it solve?<br/>
 
 What APIs do you plan to use? Remember to look for free APIs with strong documentation that do not require CORS<br/>
 https://www.openbrewerydb.org/ <br/>
-https://www.brewerydbtemp.com/developers/docs/endpoint/beer-random <br/>
-https://untappd.com/api/docs#beerinfo <br/>
+https://openweathermap.org/api<br/>
+
 
 What CSS library or framework do you plan to use?<br/>
 https://materializecss.com/
@@ -50,5 +50,6 @@ Include a quick wireframe for your application. Note that while this will likely
 will help your team get things rolling in the right direction more quickly.<br/>
 TBD
 
-
+Website URL:<br/>
+https://thomascerr.github.io/TABS-Brewery-Weather-Application/
 
