@@ -64,6 +64,20 @@ header{
     border-radius: 10px;
 }
 
+.btn2 {
+    margin: 5px;
+}
+
 .searchbox h4{
     text-emphasis: bold;
+}
+
+#search-city {
+    font-size: 25px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+    
 }

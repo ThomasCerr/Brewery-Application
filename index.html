@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App name</title>
+    <title>Tabs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
-<body>
-<header class= z-depth-1>  Header </header>
+<body class="#424242 grey darken-1">
+<header class= z-depth-1>Tabs</header>
         <div class="row row1 container-fluid bg-her" >
             <div class="col m6 center-align box box2">
                 <div class="col12">
-                <h4 class="">Search For a City</h4>
+                <h4 class=""><b>Search For a City</b></h4>
                 <input type="text" class="" id="search-city">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Search Location    
+                <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Search Location    
                 </button>
             </div>
                 <br>
@@ -23,8 +23,12 @@
                 <div class="col" id="search-history">
                 </div>
             </div>
-            <div id="weather" class="col m6  center-align box box2">
-                <h1 class = mainDate> <p id=""></p></h1>
+            <div id="weather" class="col m6 center-align box box2">
+                
+                <section id="section"><h1 class="intro">Cheers!</h1>
+                <p class="intro">Do you have something to toast? Discover the best breweries in your area and across the country.  Simply type in your location and receive a detailed list of breweries.</p>
+            </section>
+                <h1 class = mainDate ><p id="" ></p></h1>
                 <h3 class = mainTemp> </h3>
                 <h3 class = mainWind> </h3>
                 <h3 class = mainHumidity> </h3>
@@ -34,7 +38,7 @@
         </div>
         <div class="row container-fluid">
             <div class="col m12 center-align responsive-table box3" id = "brewery-list responsive-table">
-                <h4>List of Brewery Locations<h4>
+                <h4>Nearby Brewery Locations<h4>
                     <table>
                         <thead>
                           <tr>

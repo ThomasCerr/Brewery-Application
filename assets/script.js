@@ -6,7 +6,7 @@ const mainTemp = document.querySelector('.mainTemp');
 const mainHumidity = document.querySelector('.mainHumidity');
 const mainUVIndex = document.querySelector('.mainUVIndex');
 const mainWind = document.querySelector('.mainWind');
-
+var removeIntro = document.querySelector('.intro');
 
 // retrieve brewery data from API
 var fetchBreweryCity = function(city){
@@ -48,6 +48,7 @@ var fetchBreweryCity = function(city){
     
     // retrieve weather data from API
     var fetchWeather = function(city){
+        
         if (searchInput.value.trim() !== "") {
             city = searchInput.value.trim();
          } else {
@@ -55,7 +56,7 @@ var fetchBreweryCity = function(city){
          }
         
      let weatherAPI= ('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + key);
-    fetch(weatherAPI).then(function (response) {
+     fetch(weatherAPI).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
                 console.log(data)
@@ -78,28 +79,33 @@ var fetchBreweryCity = function(city){
         document.getElementById("search-history").textContent="";
         for (let i = 0; i < localStorage.length; i++) {
                  let pastSearch = JSON.parse(localStorage.getItem(localStorage.key(i)));
-                if ( i===5) {
+                if ( i===8) {
                     return;
                 }
                 console.log(localStorage)
                 var button = document.createElement("button");
                 button.classList.add("btn2");
-                button.classList.add("btn-dark");
-                button.classList.add("w-100");
-                button.classList.add("mb-3");
+                button.classList.add("btn-large");
                 document.getElementById("search-history").appendChild(button);
                 button.textContent = pastSearch;
     }}
     recentSearches();
+    
+    var clearHistory = function (event) {
+        localStorage.removeItem("searchInput");
+        breweryNameContainerEl.setAttribute("style", "display: none");
+    }
 
 //Listener
         $('.btn').on('click', function(){
+            var section = document.querySelector("section")
+            section.classList.add("hidden");
             var searchInput = document.getElementById('search-city').value;
             if (searchInput !== ''){
             localStorage.setItem(JSON.stringify(searchInput), JSON.stringify(searchInput));
             fetchBreweryCity();
             fetchWeather();
-            recentSearches();
+            recentSearches();           
             }
             else {
                 window.alert("Please Input a City");
@@ -108,9 +114,12 @@ var fetchBreweryCity = function(city){
         })
 
         $('.btn2').on('click', function(){
+            var section = document.querySelector("section")
+            section.classList.add("hidden");    
         var searchInput = $(this).text();
         fetchWeather(searchInput);
         fetchBreweryCity(searchInput);
+        
         })
     
        
