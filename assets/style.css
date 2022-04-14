@@ -6,13 +6,17 @@
   }
 
 header{
-    background-image: url('../assets/images/Brewery-Image\ .jpeg');
+    /* background-image: url('../assets/images/Brewery-Image\ .jpeg'); */
     background-size:cover;
     position: sticky;
-    position: -webkit-sticky;
+    margin: 20px;
+    padding: 10px;
+    background-color: #448AFF;
+    border-radius: 8px;
+    box-shadow: 10px 5px;
 }
 
-.bg-hero{
+/* .bg-hero{
     background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../assets/images/Brewery-Image\ .jpeg');
     background-size:cover;
     
@@ -20,13 +24,13 @@ header{
 
 .bg-hero::before{
     content: "";
-    opacity: .75;
+    opacity: .75; */
     
-}
+/* } */
 
 .row1 {
     position: sticky;
-    position: -webkit-sticky;
+    /* position: -webkit-sticky; */
     height: 400px;
     align-items: center;
 }
@@ -46,17 +50,17 @@ header{
 
 .box2{
 
-    background-color: rgba(122, 86, 86, 0.75);
-    opacity: .75;
+    background-color: #448AFF;
     height:400px;
     margin: 50px;
     border: 5px solid;
     border-radius: 12px;
 }
 
-.box3, .box4 {
+.box3 {
     box-shadow: 0 0 10px;
     margin: 50px;
+    
 }
 
 .btn {
@@ -81,3 +85,12 @@ header{
     display: none;
     
 }
+
+#brewery-list {
+    text-align: center;
+    
+}
+
+
+
+
