@@ -136,26 +136,31 @@ header {
     text-align: center;
     justify-content: center;
 }
-    section h4 {
+section h4 {
     display: block;
     flex: 100%;
     font-size: 30px;
+
+}
+body {
+    flex: 0 100px;
 }
 body div {
     font-size: 20px;
-    /*order: 3; */
+    order: 3;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin: auto;
+    padding: 10px;
 }
 .intro {
     text-align: center;
     font-size: 25px;
-}
-#brewery-list {
-    color: lawngreen;
+    flex-wrap: wrap;
 }
 
 }
+
     
 
