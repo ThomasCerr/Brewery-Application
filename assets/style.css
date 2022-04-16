@@ -117,7 +117,7 @@ header{
 /* Media Query for Tablets and Smaller */
 @media screen and (max-width: 768px) {
 
-    div section {
+div section {
     padding: 30px 15px;
 }
 body {
@@ -128,7 +128,7 @@ body {
 /* Media Query for Mobile Phones and Smaller */
 @media screen and (max-width: 575px) {
 header {
-    flex: 50px;
+    flex: 100px;
     text-align: center;
     justify-content: center;
 }
@@ -137,8 +137,10 @@ header {
     flex: 100%;
     font-size: 30px;
 }
-body {
+body div {
     font-size: 30px;
+    order: 3;
+    flex-direction: column;
 }
 
 
