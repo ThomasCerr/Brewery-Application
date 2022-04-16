@@ -98,6 +98,9 @@ header{
         justify-content: center;
         position: relative;
     }
+    body {
+        font-size: 90px;
+    }
     div {
         width: 100%;
         text-align: center;
@@ -108,16 +111,35 @@ header{
         width: 100%;
     }
     .brewery {
-        width: 100%
+        width: 100%;
     }
 }
 /* Media Query for Tablets and Smaller */
 @media screen and (max-width: 768px) {
 
+    div section {
+    padding: 30px 15px;
+}
+body {
+    font-size: 80px;
+}
 
 }
 /* Media Query for Mobile Phones and Smaller */
 @media screen and (max-width: 575px) {
+header {
+    flex: 50px;
+    text-align: center;
+    justify-content: center;
+}
+    section h4 {
+    display: block;
+    flex: 100%;
+    font-size: 30px;
+}
+body {
+    font-size: 30px;
+}
 
 
 }
