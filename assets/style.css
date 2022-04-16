@@ -119,9 +119,13 @@ header{
 
 div section {
     padding: 30px 15px;
+
 }
 body {
     font-size: 80px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
 }
 
 }
@@ -138,11 +142,19 @@ header {
     font-size: 30px;
 }
 body div {
-    font-size: 30px;
-    order: 3;
+    font-size: 20px;
+    /*order: 3; */
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
-
+.intro {
+    text-align: center;
+    font-size: 25px;
+}
+#brewery-list {
+    color: lawngreen;
+}
 
 }
     
