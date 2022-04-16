@@ -91,6 +91,35 @@ header{
     
 }
 
+/*Media query for Smaller Desktop Screens & Smaller */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    div {
+        width: 100%;
+        text-align: center;
+        flex: 0 70%; 
+    }
+    section h4 {
+        text-align: center;
+        width: 100%;
+    }
+    .brewery {
+        width: 100%
+    }
+}
+/* Media Query for Tablets and Smaller */
+@media screen and (max-width: 768px) {
 
 
+}
+/* Media Query for Mobile Phones and Smaller */
+@media screen and (max-width: 575px) {
+
+
+}
+    
 
