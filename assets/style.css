@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     
   }
 
@@ -19,7 +19,8 @@ header{
 }
 
 h1{
-    font-family: 'Ultra', serif;
+    font-family: 'Lusitana', serif;
+    font-weight: 700;
 }
 
 /* .bg-hero{
@@ -69,7 +70,7 @@ h1{
 
 .search-title {
     font-size: 35px;
-    font-weight: 500;
+    font-weight:700;
 }
 
 
@@ -79,7 +80,8 @@ h1{
 }
 
 .cheers {
-    font-weight: 500;  
+    font-weight: 600;  
+    font-size: 60px;
 }
 
 .box3 {
@@ -91,14 +93,17 @@ h1{
 .btn {
     background-color: #23817c;
     border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn2 {
     margin: 4px;
     background-color:#2ec4b6; 
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
 }
-
-
 
 #search-city {
     font-size: 25px;
@@ -110,10 +115,34 @@ h1{
     
 }
 
-#brewery-list {
-    text-align: center;
-    
+.brewery.row {
+    padding: 15px 15px 25px 50px;
 }
+
+.brewery-list {
+    text-align: center;
+   
+}
+
+.responsive-table {
+    margin: 40px;
+}
+
+.table-header {
+   font-size: 40px;
+}
+
+.nearby-brewery {
+    font-family: 'Lusitana', serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #23817c;
+}
+
+td {
+    font-size: 30px;
+}
+
 
 
 

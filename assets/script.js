@@ -43,6 +43,7 @@ var fetchBreweryCity = function(city){
             }
             }
             })
+            
         }
     })}
     
