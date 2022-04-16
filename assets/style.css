@@ -127,6 +127,17 @@ body {
     margin: auto;
     padding: 10px;
 }
+.box2{
+    flex-direction: column;
+    margin: auto;
+    padding: 20x;
+    font-size: 20px;
+}
+.box2 h4{
+    font-size: 25px;
+   margin-bottom: 15px;
+   padding-bottom: 0%;
+}
 
 }
 /* Media Query for Mobile Phones and Smaller */
@@ -153,6 +164,12 @@ body div {
     text-align: center;
     margin: auto;
     padding: 10px;
+}
+
+.box2{
+    flex-direction: column;
+    margin: auto;
+    padding: 20x;
 }
 .intro {
     text-align: center;
