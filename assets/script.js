@@ -10,12 +10,15 @@ var removeIntro = document.querySelector('.intro');
 
 // retrieve brewery data from API
 var fetchBreweryCity = function(city){
+    breweryListEl.innerHTML = '';
+
     if (searchInput.value.trim() !== "") {
         city = searchInput.value.trim();
      } else {
         city = city;
      }
-    
+     console.log(city)
+
     let apiURL = ('https://api.openbrewerydb.org/breweries?per_page=15&by_city=' + city)
     fetch(apiURL).then(function (response) {
 
@@ -47,20 +50,20 @@ var fetchBreweryCity = function(city){
         }
     })}
     
-    // retrieve weather data from API
-    var fetchWeather = function(city){
+// retrieve weather data from API
+var fetchWeather = function(city){
         
-        if (searchInput.value.trim() !== "") {
-            city = searchInput.value.trim();
-         } else {
-            city = city;
-         }
-        
+    if (searchInput.value.trim() !== "") {
+        city = searchInput.value.trim();
+        } else {
+        city = city;
+        }
+        console.log(city)
      let weatherAPI= ('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + key);
      fetch(weatherAPI).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                console.log(data)
+               
                 let today= new Date().toLocaleDateString();
                 var PrimaryWeatherIcon = data.weather[0].icon;
                 mainDate.innerHTML = data.name + "  " + today + "  " + "<img id='PrimaryWeatherIcon' src='https://openweathermap.org/img/wn/" + PrimaryWeatherIcon + ".png'>";
@@ -75,52 +78,54 @@ var fetchBreweryCity = function(city){
         }
     })}
             
-
-    function recentSearches(){
-        document.getElementById("search-history").textContent="";
-        for (let i = 0; i < localStorage.length; i++) {
-                 let pastSearch = JSON.parse(localStorage.getItem(localStorage.key(i)));
-                if ( i===8) {
-                    return;
-                }
-                console.log(localStorage)
-                var button = document.createElement("button");
-                button.classList.add("btn2");
-                button.classList.add("btn-large");
-                document.getElementById("search-history").appendChild(button);
-                button.textContent = pastSearch;
-    }}
-    recentSearches();
-    
-    var clearHistory = function (event) {
-        localStorage.removeItem("searchInput");
-        breweryNameContainerEl.setAttribute("style", "display: none");
+function recentSearches(){
+    document.getElementById("search-history").textContent="";
+    for (let i = 0; i < localStorage.length; i++) {
+                let pastSearch = JSON.parse(localStorage.getItem(localStorage.key(i)));
+            if ( i===8) {
+                return;
+            }
+            var button = document.createElement("button");
+            button.classList.add("btn2");
+            button.classList.add("btn-large");
+            button.setAttribute("id","recent");
+            document.getElementById("search-history").appendChild(button);
+            button.textContent = pastSearch;
+            }
+            $('.btn2').on('click', function(){
+                    
+                var section = document.querySelector("section")
+                section.classList.add("hidden");    
+                var searchInput = $(this).text();
+                
+                fetchWeather(searchInput);
+                fetchBreweryCity(searchInput);
+            
+            })
+                
     }
+recentSearches();
+var clearHistory = function (event) {
+    localStorage.removeItem("searchInput");
+    breweryNameContainerEl.setAttribute("style", "display: none");
+    
+}
 
 //Listener
-        $('.btn').on('click', function(){
-            var section = document.querySelector("section")
-            section.classList.add("hidden");
-            var searchInput = document.getElementById('search-city').value;
-            if (searchInput !== ''){
-            localStorage.setItem(JSON.stringify(searchInput), JSON.stringify(searchInput));
-            fetchBreweryCity();
-            fetchWeather();
-            recentSearches();           
-            }
-            else {
-                window.alert("Please Input a City");
-            }
-            
-        })
 
-        $('.btn2').on('click', function(){
-            var section = document.querySelector("section")
-            section.classList.add("hidden");    
-        var searchInput = $(this).text();
-        fetchWeather(searchInput);
-        fetchBreweryCity(searchInput);
-        
-        })
+$('.btn').on('click', function(){    
+    var section = document.querySelector("section")
+    section.classList.add("hidden");
+    var searchInput = document.getElementById('search-city').value;
+    if (searchInput !== ''){
+    localStorage.setItem(JSON.stringify(searchInput), JSON.stringify(searchInput));
+    fetchBreweryCity();
+    fetchWeather();
+    recentSearches();           
+    }
     
+    
+})
+
+
        
