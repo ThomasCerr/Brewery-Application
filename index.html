@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body class=" grey darken-1">
-<header class= ""><h1 class="container center-align"><b>Tabs</b></h1></header>
+<header class= ""><h1 class="title container center-align">Tabs</h1></header>
         <div class="row row1 container-fluid" >
             <div class="col m6 center-align box box2" id="brewerycustom">
                 <div class="col12">
@@ -20,15 +23,16 @@
                 </button>
             </div>
                 <br>
-                <br>
+                
                 <div class="col" id="search-history">
                 </div>
             </div>
+
             <div id="weather" class="col m6 center-align box box2">
                 
-                <section id="section"><h1 class="intro">Cheers!</h1>
+                <section id="section"><h2 class="cheers">Cheers!</h2>
                 <h4 class="intro">Do you have something to toast? Discover the best breweries in your area and across the country.  Simply type in your location and receive a detailed list of breweries.</h4>
-            </section>
+                </section>
                 <h2 class = mainDate ><p id="" ></p></h2>
                 <h4 class = mainTemp> </h4>
                 <h4 class = mainWind> </h4>
@@ -39,14 +43,14 @@
         </div>
         <div class="breweryResults brewery row container-fluid" id="brewerycustom">
             <div class="col m12 center-align responsive-table box3 #e0e0e0 grey lighten-2" id = "brewery-list responsive-table">
-                <h4><b>Nearby Brewery Locations</b><h4>
-                    <table>
+                <h4 class="nearby-brewery">Nearby Brewery Locations<h4>
+                    <table class="highlight">
                         <thead>
                           <tr>
-                              <th>Name</th>
-                              <th>Address</th>
-                              <th>Phone Number</th>
-                              <th>Type</th>
+                              <th class="table-header-name">Name</th>
+                              <th class="table-header">Address</th>
+                              <th class="table-header">Phone Number</th>
+                              <th class="table-header">Type</th>
                           </tr>
                         </thead>
                         <tbody class="breweryList">
