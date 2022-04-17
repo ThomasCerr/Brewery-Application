@@ -54,12 +54,12 @@ Website URL:<br/>
 https://thomascerr.github.io/TABS-Brewery-Weather-Application/
 
 Beta Screenshoot of the Tabs Website:
-o	![ScreenShot](./assets/images/Screen%20Shot%202022-04-14%20at%206.50.09%20PM.png)
+![ScreenShot](./assets/images/Screen%20Shot%202022-04-14%20at%206.50.09%20PM.png)
 
 How to Navigate on the website : 
 Search for the City Box: 
  - Type in any location to find the nearest breweries and local weather forecast
- -Forecast Box: 
+ - Forecast Box: 
  - Shows the current weather forecast
  Brewery List Box: 
  - Displays the list of breweries with your area along with addresses and phone number to contact
