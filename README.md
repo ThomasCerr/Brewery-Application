@@ -71,4 +71,3 @@ Bonus: Screenshot Powerpoint Presentation of our creation:
 ![screenshot](./assets/images/Screen%20Shot%202022-04-16%20at%206.49.41%20PM.png)
 ![screenshot](./assets/images/Screen%20Shot%202022-04-16%20at%206.49.43%20PM.png)
 ![screenshot](./assets/images/Screen%20Shot%202022-04-16%20at%206.49.46%20PM.png)
-![screenshot](./assets/images/Screen%20Shot%202022-04-14%20at%206.50.09%20PM.png)
