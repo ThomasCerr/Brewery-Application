@@ -50,6 +50,8 @@ Include a quick wireframe for your application. Note that while this will likely
 will help your team get things rolling in the right direction more quickly.<br/>
 TBD
 
+![ScreenShot](./assets/images/Wireframe.png)
+
 Website URL:<br/>
 https://thomascerr.github.io/TABS-Brewery-Weather-Application/
 
