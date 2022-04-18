@@ -7,17 +7,12 @@ const mainHumidity = document.querySelector('.mainHumidity');
 const mainUVIndex = document.querySelector('.mainUVIndex');
 const mainWind = document.querySelector('.mainWind');
 var removeIntro = document.querySelector('.intro');
+var searchInputForm = "";
 
-// retrieve brewery data from API
+// Retrieve brewery data from API
 var fetchBreweryCity = function(city){
     breweryListEl.innerHTML = '';
-
-    if (searchInput.value.trim() !== "") {
-        city = searchInput.value.trim();
-     } else {
-        city = city;
-     }
-     console.log(city)
+    console.log(city)
 
     let apiURL = ('https://api.openbrewerydb.org/breweries?per_page=15&by_city=' + city)
     fetch(apiURL).then(function (response) {
@@ -25,7 +20,7 @@ var fetchBreweryCity = function(city){
         //add some type of clear list here to get rid of the old data
         if (response.ok) {
             response.json().then(function (data) {
-                console.log(data)
+                
                 // randomizer needed
                 for (let i = 0; i < data.length; i++) {
                  var breweryType = data[i].brewery_type;
@@ -52,13 +47,7 @@ var fetchBreweryCity = function(city){
     
 // retrieve weather data from API
 var fetchWeather = function(city){
-        
-    if (searchInput.value.trim() !== "") {
-        city = searchInput.value.trim();
-        } else {
-        city = city;
-        }
-        console.log(city)
+    
      let weatherAPI= ('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + key);
      fetch(weatherAPI).then(function (response) {
         if (response.ok) {
@@ -91,16 +80,15 @@ function recentSearches(){
             button.setAttribute("id","recent");
             document.getElementById("search-history").appendChild(button);
             button.textContent = pastSearch;
+
             }
-            $('.btn2').on('click', function(){
-                    
+            //Listener2
+            $('.btn2').on('click', function(){       
                 var section = document.querySelector("section")
                 section.classList.add("hidden");    
                 var searchInput = $(this).text();
-                
                 fetchWeather(searchInput);
                 fetchBreweryCity(searchInput);
-            
             })
                 
     }
@@ -116,15 +104,18 @@ var clearHistory = function (event) {
 $('.btn').on('click', function(){    
     var section = document.querySelector("section")
     section.classList.add("hidden");
-    var searchInput = document.getElementById('search-city').value;
-    if (searchInput !== ''){
-    localStorage.setItem(JSON.stringify(searchInput), JSON.stringify(searchInput));
-    fetchBreweryCity();
-    fetchWeather();
-    recentSearches();           
+    searchInputForm = document.getElementById('search-city').value;
+    if (searchInputForm !== ''){
+    localStorage.setItem(JSON.stringify(searchInputForm), JSON.stringify(searchInputForm));
+    if (searchInput.value.trim() !== "") {
+        city = searchInput.value.trim();
+        } else {
+        city = city;
+        }
+    fetchBreweryCity(city);
+    fetchWeather(city);
+    recentSearches(city); 
     }
-    
-    
 })
 
 
